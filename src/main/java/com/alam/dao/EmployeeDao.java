@@ -10,5 +10,5 @@ public interface EmployeeDao {
 
     void updateEmployee(Integer empId, Employee employee);
 
-    Boolean deleteEmployee(Integer empId);
+    void deleteEmployee(Integer empId);
 }

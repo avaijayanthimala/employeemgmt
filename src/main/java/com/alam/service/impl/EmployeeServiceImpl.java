@@ -25,7 +25,6 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    public Boolean deleteEmployee(Integer empId) {
-        return employeeDao.deleteEmployee(empId);
+    public void deleteEmployee(Integer empId) { employeeDao.deleteEmployee(empId);
     }
 }

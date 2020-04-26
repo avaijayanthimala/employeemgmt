@@ -28,7 +28,7 @@ So to do that we need to call the Interface service class ku mattium than obj cr
         employeeService.updateEmployee(empId, employee);
     }
     //remove
-    public Boolean deleteEmployee(Integer empId) {
-        return employeeService.deleteEmployee(empId);
+    public void deleteEmployee(Integer empId) {
+        employeeService.deleteEmployee(empId);
     }
 }

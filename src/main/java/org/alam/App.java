@@ -4,6 +4,7 @@ import com.alam.controller.EmployeeController;
 import com.alam.vo.Address;
 import com.alam.vo.Employee;
 
+import javax.sound.midi.Soundbank;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,40 +19,37 @@ public class App
     {
         EmployeeController employeeController = new EmployeeController();
 
-        Employee emp = new Employee();
-        emp.setEmpId(2112);
-        emp.setFirstName("Vaijayanthimala");
-        emp.setLastName("Anandhan");
-
-        Address address = new Address();
-        address.setDoorNo(26);
-        address.setStreetName("VGP street");
-        address.setCity("Chennai");
-        address.setState("TamilNadu");
-        address.setZipCode("600042");
-
-        List<Address> addressList = new ArrayList<>();
-        addressList.add(address);
-
-        emp.setAddressList(addressList);
-        //Create
-        employeeController.saveEmployee(emp);
         //Retrieve
-        System.out.println(employeeController.getEmployee(2112));
+        System.out.println(employeeController.getEmployee(0));
 
-        emp.setFirstName("Vijay Anand");
-        emp.setLastName("Balasubramanian");
+        Employee emp = new Employee();
+        emp.setEmpId(4);
+        emp.setFirstName("Wonder");
+        emp.setLastName("Woman");
+
+        //insert
+        employeeController.saveEmployee(emp);
+
+        //Retrieve
+        System.out.println(employeeController.getEmployee(0));
+
+
+        Employee emp1 = new Employee();
+        emp1.setFirstName("Thanos");
+        emp1.setLastName("Destroyer");
 
         //update
-        employeeController.updateEmployee(2112, emp);
+        employeeController.updateEmployee(4, emp1);
 
         //Retrieve
-        System.out.println(employeeController.getEmployee(2112));
+        System.out.println(employeeController.getEmployee(0));
 
         //Delete
-        System.out.println(employeeController.deleteEmployee(2112));
+        employeeController.deleteEmployee(4);
 
         //Retrieve
-        System.out.println(employeeController.getEmployee(2112));
+        System.out.println(employeeController.getEmployee(0));
+
+
     }
 }
